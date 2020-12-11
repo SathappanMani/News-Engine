@@ -4,11 +4,15 @@
 		<link rel='stylesheet' href={{ url_for("static", filename='style.css') }} />
 	</head>
 	<body>
-		<h1>News Engine</h1>
-		<form action='/search' method="GET">
-			<input type="text" name="query" />
-			<input type='submit' />
-		</form>
+		<center class="search">
+			<h1>News Engine</h1>
+				<form action='/search' method="GET" class="form">
+					<input type="text" name="query" class="search-query"
+					/>			
+					<input type="image" src={{ url_for('static', filename='images/search-icon.png') }} alt="Submit" width="50" height="50" class="search-icon"/>
+				</form>
+			</div>
+		</center>
 	
 	</body>
 </html>
