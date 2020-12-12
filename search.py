@@ -15,13 +15,14 @@ def search():
 	data=requests.get("https://newsapi.org/v2/top-headlines?q="+query+"&apiKey="+api_key).json();
 	titles=[]
 	urls=[]
+	descp=[]
 	data=data['articles']
 	for i in range(min(len(data),10)):
 		temp=data[i];
 		titles.append(temp['title'])
 		urls.append(temp['url'])
-
-	return render_template('results.html',titles=titles,urls=urls);
+		descp.append(temp["description"])
+	return render_template('results.html',titles=titles,urls=urls,descp=descp);
 
 if(__name__ == '__main__'):
 	app.run(host='0.0.0.0',port=2512,debug=True)

@@ -1,18 +1,23 @@
 <html>
+
 	<head>
 		<title>News Engine</title>
-		<link rel='stylesheet' href={{ url_for("static", filename='style.css') }} />
+		<link rel='stylesheet' href={{ url_for("static", filename='styles.css') }} />
 	</head>
 	<body>
 		<center class="search">
-			<h1>News Engine</h1>
+			<h1 >News Engine</h1>
+			<!-- <div class="main"> -->
 				<form action='/search' method="GET" class="form">
-					<input type="text" name="query" class="search-query"
-					/>			
-					<input type="image" src={{ url_for('static', filename='images/search-icon.png') }} alt="Submit" width="50" height="50" class="search-icon"/>
+					<input type="text" name="query" class="search-query"  />			
+					<!-- <input type="image" src={{ url_for('static', filename='images/search-icon.png') }} alt="Submit" width="50" height="50" class="search-icon"/> --> 
+					 <input type="submit" class="button" alt="Submit" value="Search" />
 				</form>
-			</div>
+			<!-- </div> -->
+			<h2>The Engine displays the top News based on the key word you look for....</h2>
 		</center>
 	
+
+
 	</body>
 </html>
